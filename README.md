@@ -1,4 +1,4 @@
-<h1>BazaarVoice_StandardClient_Feed_to_BigQuery</h1>
+#BazaarVoice_StandardClient_Feed_to_BigQuery
 
 The use case of this repo is to serve as an example of how we can use customer natural language product reviews for analytics and data science use.
 
@@ -10,18 +10,18 @@ The Standard Client Feed XML is parsed and flattened into two BigQuery tables.
  - Product Granularity (Review metrics aggregated by ProductID)
  - Review Granularity (A record for each individual customer review)
 
-<h4>Collection</h4>
+**Collection**
  - A Google Cloud Function is triggered weekly by Google cloud Scheduler http triggers
  - A small python script runs using the pysftp package to collect the large file from BazaarVoice SFTP site
  - The raw .xml.gz files are written to a Google Cloud Storage Bucket
 
-<h4>Wrangling</h4>
+**Wrangling**
  - Performed in a Google AI Hub Notebook
  - ElementTree
  - pandas
  - Google BigQuery target tables
  
-<h4>Sentiment Analysis</h4>
+**Sentiment Analysis**
  - Performed in an Google AI Hub Notebook
  - Google BigQuery is used to select join to external product master data.
  - pandas

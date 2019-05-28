@@ -22,7 +22,7 @@ The Standard Client Feed XML is parsed and flattened into two BigQuery tables.
  - Google BigQuery target tables
  
 **Sentiment Analysis**
- - Performed in an Google AI Hub Notebook
+ - Performed in a Google AI Hub Notebook
  - Google BigQuery is used to select join to external product master data.
  - pandas
  - nltk vader is used to create the numeric sentiment scores

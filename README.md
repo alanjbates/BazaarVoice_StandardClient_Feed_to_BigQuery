@@ -10,20 +10,20 @@ The Standard Client Feed XML is parsed and flattened into two BigQuery tables.
  - Product Granularity (Review metrics aggregated by ProductID)
  - Review Granularity (A record for each individual customer review)
 
-**Collection**
+**Collection** ( SFTP_script.py )
  - A Google Cloud Function is triggered weekly by Google cloud Scheduler http triggers
  - A small python script runs using the pysftp package to collect the large file from BazaarVoice SFTP site
  - The raw .xml.gz files are written to a Google Cloud Storage Bucket
 
-**Wrangling**
+**Wrangling** ( py_Wrangle_XML_into_BQ.ipynb )
  - Performed in a Google AI Hub Notebook
  - ElementTree
  - pandas
  - Google BigQuery target tables
  
-**Sentiment Analysis**
- - Performed in a Google AI Hub Notebook
- - Google BigQuery is used to select join to external product master data.
+**Sentiment Analysis** ( py_Sentiment_Analysis.ipynb )
+ - Google BigQuery is used to select join to external product master data and materialize the data
+ - Performed in a Google AI Hub Notebook1
  - pandas
  - nltk vader is used to create the numeric sentiment scores
  - seaborn is used for visual analysis

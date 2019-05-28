@@ -1,6 +1,6 @@
 # BazaarVoice_StandardClient_Feed_to_BigQuery
 
-The use case of this repo is to serve as an example of how we can use customer natural language product reviews for analytics and data science use.
+The use case of this repo is to serve as an example of how we can use customer natural language product reviews for analytics and data science.
 
 BazaarVoice is the leading Product Ratings and Reviews partner in the Industry.  This is the definition of the data that I collect from Bazaarvoice:
 
